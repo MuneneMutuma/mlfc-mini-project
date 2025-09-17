@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Kenya Master Health Facility List (2020)",
+    "filename": "kmhfl_hospitals_2020.csv",
+    "source_url": "https://open.africa/dataset/bb87c99a-78f8-4b8c-8186-4b0f4d935bcd/resource/6d13d7ff-ce54-4c8e-8879-da24fd3b456d/download/cfafrica-_-data-team-_-outbreak-_-covid19-_-data-_-openafrica-uploads-_-kenya-hospital-ke.csv",
+    "description": "List of hospitals and number of beds in Kenya, 2020. Sourced from the Kenya Master Health Facility List.",
+    "format": "CSV",
+    "license": "Creative Commons Attribution 4.0 International",
+    "date_published": "2020-05-01",
+    "provider": "Code for Africa / Kenya Ministry of Health",
+    "coverage": "Kenya, national",
+    "fields_sample": ["Facility Name", "County", "Beds", "Type", "Ownership"]
+  },
+  {
+    "name": "WorldPop Kenya 2020 Population Raster",
+    "filename": "worldpop_kenya_2020.tif",
+    "source_url": "https://data.worldpop.org/GIS/Population/Global_2000_2020/2020/KEN/ken_ppp_2020.tif",
+    "description": "Gridded population counts for Kenya at 100m resolution for 2020.",
+    "format": "GeoTIFF",
+    "license": "Creative Commons Attribution 4.0 International",
+    "date_published": "2020",
+    "provider": "WorldPop",
+    "coverage": "Kenya, national",
+    "fields_sample": ["Population count per grid cell"]
+  },
+  {
+    "name": "Facebook HRSL Kenya 2020",
+    "filename": "hrsl_kenya_2020.zip",
+    "source_url": "https://data.humdata.org/dataset/2964b369-c10c-4b55-94a8-495de3fc9858/resource/728e9fe2-0707-491f-91d8-3dc8379d7a32/download/ken_general_2020_csv.zip",
+    "description": "High Resolution Settlement Layer (HRSL) for Kenya, 2020. Population estimates at high spatial resolution.",
+    "format": "ZIP (CSV inside)",
+    "license": "Creative Commons Attribution 4.0 International",
+    "date_published": "2020",
+    "provider": "Facebook Data for Good / CIESIN / World Bank / UN",
+    "coverage": "Kenya, national",
+    "fields_sample": ["latitude", "longitude", "population"]
+  },
+  {
+    "name": "Kenya Counties Shapefile",
+    "filename": "kenya_counties_shapefile.zip",
+    "source_url": "https://open.africa/dataset/194132e2-d3b8-4c76-9eac-1bd91ebaa9ad/resource/0b78f25e-494e-4258-96b8-a3ab2b35b121/download/kenyan-counties.zip",
+    "description": "Kenya counties boundary data in .shp format.",
+    "format": "ZIP (SHP inside)",
+    "license": "Creative Commons Attribution 4.0 International",
+    "date_published": "2015-10-21",
+    "provider": "Code for Africa",
+    "coverage": "Kenya, counties",
+    "fields_sample": ["County name", "geometry"]
+  },
+  {
+    "name": "Kenya Wards Shapefile",
+    "filename": "kenya_wards_shapefile.zip",
+    "source_url": "https://data.humdata.org/dataset/e8d06ae7-740b-4491-8749-43f81700cf41/resource/858129b2-7197-4ffe-b34f-c2091b307b2c/download/kenya_wards.zip",
+    "description": "Kenya wards boundary data in .shp format.",
+    "format": "ZIP (SHP inside)",
+    "license": "Creative Commons Attribution 4.0 International",
+    "date_published": "unknown",
+    "provider": "Humanitarian Data Exchange (HDX)",
+    "coverage": "Kenya, wards",
+    "fields_sample": ["Ward name", "geometry"]
+  },
+  {
+    "name": "Kenya Schools Shapefile",
+    "filename": "kenya_schools_shapefile.zip",
+    "source_url": "https://energydata.info/dataset/2fda191d-c3c6-4002-8c82-daa02008a9e3/resource/849830e2-fcb5-4b42-8d33-e42c7c1e90b4/download/schools.zip",
+    "description": "School locations in Kenya (Primary and Secondary). Provided by Kenya Ministry of Education.",
+    "format": "ZIP (SHP inside)",
+    "license": "Creative Commons Attribution 4.0 International",
+    "date_published": "2020-08-18",
+    "provider": "Kenya Ministry of Education / Energydata.info",
+    "coverage": "Kenya, national",
+    "fields_sample": ["School name", "Type", "geometry"]
+  },
+  {
+    "name": "Kenya Schools JSON",
+    "filename": "kenya_schools.json",
+    "source_url": "https://energydata.info/dataset/2fda191d-c3c6-4002-8c82-daa02008a9e3/resource/129b8c79-de8b-4b7b-8310-cdd207e46863/download/schools.json",
+    "description": "School locations in Kenya (Primary and Secondary) in JSON format. Provided by Kenya Ministry of Education.",
+    "format": "JSON",
+    "license": "Creative Commons Attribution 4.0 International",
+    "date_published": "2020-08-18",
+    "provider": "Kenya Ministry of Education / Energydata.info",
+    "coverage": "Kenya, national",
+    "fields_sample": ["School name", "Type", "coordinates"]
+  },
+  {
+    "name": "Kenya Health Facilities Shapefile",
+    "filename": "kenya_health_facilities_shapefile.zip",
+    "source_url": "https://energydata.info/dataset/7e456b65-1c58-4031-9a91-397787c1334c/resource/eeec12d8-d4c6-4112-8c0f-676f88f90f1b/download/healthcare-facilities.zip",
+    "description": "Data on healthcare facility locations in Kenya. Provided by the Government of Kenya. Shapefile format.",
+    "format": "ZIP (SHP inside)",
+    "license": "Creative Commons Attribution 4.0 International",
+    "date_published": "2021-03-02",
+    "provider": "Government of Kenya / Energydata.info",
+    "coverage": "Kenya, national",
+    "fields_sample": ["Facility_N", "Type", "Owner", "County", "Latitude", "Longitude", "geometry"]
+  },
+  {
+    "name": "Kenya Health Facilities JSON",
+    "filename": "kenya_health_facilities.json",
+    "source_url": "https://energydata.info/dataset/7e456b65-1c58-4031-9a91-397787c1334c/resource/cca57586-9600-4736-8287-35f32d59071f/download/healthcare_facilities.json",
+    "description": "Data on healthcare facility locations in Kenya. Provided by the Government of Kenya. JSON format.",
+    "format": "JSON",
+    "license": "Creative Commons Attribution 4.0 International",
+    "date_published": "2021-03-02",
+    "provider": "Government of Kenya / Energydata.info",
+    "coverage": "Kenya, national",
+    "fields_sample": ["Facility_N", "Type", "Owner", "County", "Latitude", "Longitude"]
+  },
+  {
+    "name": "Kenya Health Facilities CSV",
+    "filename": "kenya_health_facilities.csv",
+    "source_url": "https://energydata.info/dataset/7e456b65-1c58-4031-9a91-397787c1334c/resource/841097c2-9424-4c90-b1e7-8e942a817c3c/download/healthcare_facilities.csv",
+    "description": "Data on healthcare facility locations in Kenya. Provided by the Government of Kenya. CSV format.",
+    "format": "CSV",
+    "license": "Creative Commons Attribution 4.0 International",
+    "date_published": "2021-03-02",
+    "provider": "Government of Kenya / Energydata.info",
+    "coverage": "Kenya, national",
+    "fields_sample": ["Facility_N", "Type", "Owner", "County", "Latitude", "Longitude"]
+  }
+]
