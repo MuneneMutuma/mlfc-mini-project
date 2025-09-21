@@ -85,5 +85,17 @@
     "path": "data/raw/kenya_health_facilities.csv",
     "description": "Kenya health facilities data in CSV format.",
     "source": "https://energydata.info/dataset/7e456b65-1c58-4031-9a91-397787c1334c/resource/841097c2-9424-4c90-b1e7-8e942a817c3c/download/healthcare_facilities.csv"
+  },
+  {
+    "filename": "hrslkenpop.zip",
+    "path": "data/raw/hrslkenpop.zip",
+    "description": "Facebook HRSL Kenya population raster (GeoTIFF). ZIP with TIF and auxiliary files inside.",
+    "source": "https://us-iad-1.linodeobjects.com/edi-prod-public/edi-prod/resources/1473018a-3912-4b2f-873f-010d5f4b4df1/hrslkenpop.zip",
+    "unzipped": [
+      "data/raw/hrslkenpop/hrsl_ken_pop.tif",
+      "data/raw/hrslkenpop/hrsl_ken_pop.tfw",
+      "data/raw/hrslkenpop/hrsl_ken_pop.tif.aux.xml",
+      "data/raw/hrslkenpop/hrsl_ken_pop.tif.ovr"
+    ]
   }
 ]

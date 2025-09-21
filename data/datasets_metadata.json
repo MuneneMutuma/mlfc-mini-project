@@ -118,5 +118,17 @@
     "provider": "Government of Kenya / Energydata.info",
     "coverage": "Kenya, national",
     "fields_sample": ["Facility_N", "Type", "Owner", "County", "Latitude", "Longitude"]
+  },
+  {
+    "name": "HRSL Kenya Population Raster (Facebook Data for Good)",
+    "filename": "hrslkenpop.zip",
+    "source_url": "https://us-iad-1.linodeobjects.com/edi-prod-public/edi-prod/resources/1473018a-3912-4b2f-873f-010d5f4b4df1/hrslkenpop.zip",
+    "description": "High Resolution Settlement Layer (HRSL) for Kenya, provided by Facebook Data for Good. Contains gridded population estimates at ~30m resolution. Distributed as a ZIP with GeoTIFF (.tif) and auxiliary files.",
+    "format": "ZIP (GeoTIFF inside)",
+    "license": "Creative Commons Attribution 4.0 International",
+    "date_published": "2020",
+    "provider": "Facebook Data for Good / CIESIN / World Bank / UN / EDI",
+    "coverage": "Kenya, national",
+    "fields_sample": ["Population count per raster cell"]
   }
 ]
