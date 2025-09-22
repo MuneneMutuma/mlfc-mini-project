@@ -17,6 +17,7 @@ from shapely.geometry import Point, mapping
 import plotly.express as px
 import plotly.graph_objects as go
 import osmnx as ox
+import networkx as nx
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("access.pipeline")
@@ -112,6 +113,36 @@ class AccessPipeline:
         src = rasterio.open(raster_path)
         logger.info(f"Raster loaded: {raster_path} | CRS={src.crs} | width={src.width} height={src.height}")
         return src
+    
+        # Convenience alias: load county-by-name using the default local counties file
+    def load_county(self, county_name: str, boundary_source: Optional[str] = "../data/raw/kenya_counties_shapefile/County.shp") -> gpd.GeoDataFrame:
+        """
+        Convenience wrapper: returns GeoDataFrame for the named county.
+        boundary_source may be a file path or GeoDataFrame.
+        """
+        return self.load_boundary(boundary_source, county_name=county_name)
+
+    # Convenience: load & clip population raster to a boundary and produce points
+    def load_population_points(self, raster_path: str, boundary_gdf: gpd.GeoDataFrame,
+                               threshold: float = 0, max_points: int = 200000) -> gpd.GeoDataFrame:
+        """
+        Clip raster to boundary and convert to population points in one call.
+        """
+        out_raster_path, arr, meta = self.clip_raster_to_boundary(raster_path, boundary_gdf)
+        return self.raster_to_points(arr, meta["transform"], threshold=threshold, max_points=max_points)
+
+    # Convenience: load facilities and clip to boundary in one call
+    def load_facilities_clipped(self, facility_source: Union[str, gpd.GeoDataFrame], boundary_gdf: gpd.GeoDataFrame,
+                                lon_col: Optional[str] = None, lat_col: Optional[str] = None) -> gpd.GeoDataFrame:
+        """
+        Load facilities (file or gdf), then intersect with boundary_gdf and return clipped facilities.
+        """
+        gdf = self.load_facilities(facility_source, lon_col=lon_col, lat_col=lat_col)
+        # ensure same crs
+        gdf = gdf.to_crs(boundary_gdf.crs)
+        clipped = gdf[gdf.within(boundary_gdf.geometry.unary_union)].copy()
+        return clipped
+
 
     # -------------------------
     # Preprocess utilities
@@ -178,7 +209,7 @@ class AccessPipeline:
     # -------------------------
     # OSM / Road network
     # -------------------------
-    def get_osm_graph(self, boundary_gdf: gpd.GeoDataFrame, network_type: str = "drive", buffer_m: int = 2000) -> Tuple[ox.Graph, gpd.GeoDataFrame, gpd.GeoDataFrame]:
+    def get_osm_graph(self, boundary_gdf: gpd.GeoDataFrame, network_type: str = "drive", buffer_m: int = 2000) -> Tuple[nx.MultiDiGraph, gpd.GeoDataFrame, gpd.GeoDataFrame]:
         """
         Download (or reuse cached) OSM road graph around the study polygon:
         - boundary_gdf must be in WGS84
