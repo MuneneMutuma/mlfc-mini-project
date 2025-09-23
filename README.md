@@ -1,6 +1,6 @@
 # Urban Accessibility and Service Deserts in Kenya
 
-This project maps and quantifies accessibility to essential services (clinics, schools, markets, transport) in Nairobi, Kenya, to identify underserved “service deserts.”
+This project maps and quantifies accessibility to essential services ( health facilities for now) in Nairobi, Kenya, to identify underserved “service deserts.”
 
 ## Structure
 - `data/` — Raw, processed, and output data
@@ -8,6 +8,7 @@ This project maps and quantifies accessibility to essential services (clinics, s
 - `notebooks/` — Jupyter notebooks (Fynesse template)
 - `outputs/` — Final maps, indices, and reports
 - `docs/` — Documentation and policy briefs
+- `scripts/` - scripts for different functionalities e.g. downloading data sets.
 
 ## Phases
 - **Access:** Data collection and integration
